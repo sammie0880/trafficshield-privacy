@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>導航不 Delay：隱私權政策</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 24px 20px 64px; max-width: 44rem;
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+          "Noto Sans TC", "Helvetica Neue", sans-serif;
+    color: #1c1c1e; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e9e9ea; background: #111214; } }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .6rem; }
+  .updated { color: #6b7280; font-size: .9rem; margin: 0 0 2rem; }
+  @media (prefers-color-scheme: dark) { .updated { color: #9ba1a6; } }
+  table { border-collapse: collapse; width: 100%; margin: .8rem 0; font-size: .95rem; }
+  th, td { border: 1px solid #d8dade; padding: 8px 10px; text-align: left; vertical-align: top; }
+  @media (prefers-color-scheme: dark) { th, td { border-color: #33363b; } }
+  th { background: rgba(127,127,127,.12); font-weight: 600; }
+  code { font-size: .9em; background: rgba(127,127,127,.16); padding: 1px 5px; border-radius: 4px; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  .note { border-left: 3px solid #8a8f98; padding: .1rem 0 .1rem .9rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+
+<h1>導航不 Delay 隱私權政策</h1>
+<p class="updated">最後更新：2026 年 7 月 28 日</p>
+
+<p>導航不 Delay（TrafficShield，以下稱「本 App」）是一款單機使用的導航與準時提醒工具。
+本 App <strong>沒有帳號系統</strong>、<strong>沒有廣告</strong>、<strong>沒有第三方分析或廣告 SDK</strong>，
+也<strong>不會為了追蹤而跨 App 或跨網站串接你的資料</strong>。</p>
+
+<h2>一、本 App 會處理哪些資料</h2>
+
+<table>
+  <tr><th>資料</th><th>何時取得</th><th>用途</th><th>去哪裡</th></tr>
+  <tr>
+    <td>精確位置</td>
+    <td>你按下規劃路線、開始導航，或選擇「以目前位置出發」時</td>
+    <td>計算路線、顯示導航畫面、判斷是否偏離路線與是否會遲到</td>
+    <td>經由開發者自行架設的中繼伺服器轉送給地圖服務商 TomTom。伺服器<strong>不保存座標</strong>。</td>
+  </tr>
+  <tr>
+    <td>地點搜尋內容</td>
+    <td>你在搜尋欄輸入文字時</td>
+    <td>地點搜尋與地址解析</td>
+    <td>同上，轉送給 TomTom。伺服器<strong>不保存查詢內容</strong>。</td>
+  </tr>
+  <tr>
+    <td>裝置識別碼與 App 版本</td>
+    <td>每次向伺服器請求時</td>
+    <td>了解 App 的使用情況，例如還有多少裝置停在舊版本</td>
+    <td>使用 Apple 提供的 <code>identifierForVendor</code>；伺服器以只存在伺服器上的金鑰做 HMAC 雜湊後才寫入，磁碟上沒有可反推回裝置的值。你刪除本 App 後該識別碼即重置。</td>
+  </tr>
+</table>
+
+<div class="note">
+中繼伺服器的請求日誌會遮蔽座標與搜尋字串，不含位置、不含目的地、不含 IP。
+</div>
+
+<h2>二、只留在你手機上、不會離開裝置的資料</h2>
+<ul>
+  <li>最愛地點、常用出發地與目的地</li>
+  <li>日常任務（準時提醒）的設定與計算結果</li>
+  <li>通勤歷史紀錄（用來學習你這條路實際要開多久）</li>
+  <li>App 設定與偏好</li>
+</ul>
+<p>以上資料存在本 App 自己的儲存空間與 App Group 容器中，不會上傳。
+<strong>刪除本 App 即一併刪除</strong>。本 App 的提醒通知都是裝置本機通知，不經過伺服器。</p>
+
+<h2>三、本 App 不會做的事</h2>
+<ul>
+  <li>不蒐集姓名、電子郵件、電話、通訊錄、相片或健康資料</li>
+  <li>不使用廣告識別碼（IDFA），不進行 App 追蹤透明度（ATT）所定義的追蹤</li>
+  <li>不販售、不出租、不交換你的任何資料</li>
+  <li>不為了行銷目的建立你的個人檔案</li>
+</ul>
+
+<h2>四、第三方服務</h2>
+<p>本 App 的地圖、路線規劃、即時路況與地點搜尋由 <strong>TomTom</strong> 提供。
+為了讓 API 金鑰不會被放進 App 內，所有請求都先送到開發者自行架設的中繼伺服器，
+再由伺服器轉送給 TomTom；TomTom 依其自身的隱私權政策處理收到的資料
+（<a href="https://www.tomtom.com/privacy/">https://www.tomtom.com/privacy/</a>）。</p>
+<p>本 App 的地圖繪製使用開源函式庫 MapLibre GL Native，該函式庫不會蒐集任何資料。</p>
+
+<h2>五、你的選擇</h2>
+<ul>
+  <li><strong>位置權限</strong>：可在 iOS「設定 → 隱私權與安全性 → 定位服務」隨時關閉。關閉後仍可手動輸入出發地與目的地規劃路線，但無法使用導航與偏離路線偵測。</li>
+  <li><strong>通知</strong>：可在 iOS 設定中關閉，日常任務的提醒即不再送出。</li>
+  <li><strong>刪除資料</strong>：刪除本 App 即刪除所有留在裝置上的資料，裝置識別碼同時重置。</li>
+</ul>
+
+<h2>六、兒童</h2>
+<p>本 App 並非針對 13 歲以下兒童設計，也不會刻意蒐集兒童的個人資料。</p>
+
+<h2>七、政策變更</h2>
+<p>本政策若有更新，會直接修改本頁面並更新頁首的「最後更新」日期。</p>
+
+<h2>八、聯絡方式</h2>
+<p>對本政策或你的資料有任何疑問，請來信：
+<strong><a href="mailto:sammie08802000@gmail.com">sammie08802000@gmail.com</a></strong></p>
+
+</body>
+</html>
