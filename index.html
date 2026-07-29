@@ -30,7 +30,7 @@
 <body>
 
 <h1>導航不 Delay 隱私權政策</h1>
-<p class="updated">最後更新：2026 年 7 月 28 日</p>
+<p class="updated">最後更新：2026 年 7 月 29 日</p>
 
 <p>導航不 Delay（TrafficShield，以下稱「本 App」）是一款單機使用的導航與準時提醒工具。
 本 App <strong>沒有帳號系統</strong>、<strong>沒有廣告</strong>、<strong>沒有第三方分析或廣告 SDK</strong>，
@@ -51,6 +51,18 @@
     <td>你在搜尋欄輸入文字時</td>
     <td>地點搜尋與地址解析</td>
     <td>同上，轉送給 TomTom。伺服器<strong>不保存查詢內容</strong>。</td>
+  </tr>
+  <tr>
+    <td>行事曆行程</td>
+    <td><strong>只有</strong>在你主動按下「同步日曆」時</td>
+    <td>讀取行程的標題、時間與地點文字，換算成「幾點該出門」的提醒</td>
+    <td>地點文字送交 Apple 的地理編碼服務換成座標，該座標再依上述路線流程處理。行程標題與時間<strong>只留在你的裝置上</strong>。</td>
+  </tr>
+  <tr>
+    <td>動作與健身（動作感測）</td>
+    <td>導航進行中</td>
+    <td>判斷車輛是否靜止，藉此降低 GPS 取樣頻率以省電</td>
+    <td><strong>完全不離開裝置</strong>，也不寫入任何紀錄。</td>
   </tr>
   <tr>
     <td>裝置識別碼與 App 版本</td>
@@ -76,7 +88,8 @@
 
 <h2>三、本 App 不會做的事</h2>
 <ul>
-  <li>不蒐集姓名、電子郵件、電話、通訊錄、相片或健康資料</li>
+  <li>不蒐集姓名、電子郵件、電話、通訊錄或相片</li>
+  <li>不讀取健康資料。動作感測只用於判斷車輛是否靜止，資料不離開裝置</li>
   <li>不使用廣告識別碼（IDFA），不進行 App 追蹤透明度（ATT）所定義的追蹤</li>
   <li>不販售、不出租、不交換你的任何資料</li>
   <li>不為了行銷目的建立你的個人檔案</li>
@@ -88,10 +101,23 @@
 再由伺服器轉送給 TomTom；TomTom 依其自身的隱私權政策處理收到的資料
 （<a href="https://www.tomtom.com/privacy/">https://www.tomtom.com/privacy/</a>）。</p>
 <p>本 App 的地圖繪製使用開源函式庫 MapLibre GL Native，該函式庫不會蒐集任何資料。</p>
+<p>台灣地址查詢，以及 TomTom 查無結果時的地點搜尋，會另外使用 <strong>Apple 地圖服務</strong>
+（<code>MKLocalSearch</code> 與 <code>CLGeocoder</code>）；導航中顯示的行政區名稱亦同。
+這些請求由 iOS 直接送出，依 Apple 自身的隱私權政策處理
+（<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>）。</p>
+
+<h2 id="retention">四之一、保存期限與刪除</h2>
+<ul>
+  <li><strong>留在你裝置上的資料</strong>（最愛、日常任務、通勤歷史、設定）：保留到你刪除該筆資料或刪除本 App 為止。</li>
+  <li><strong>中繼伺服器</strong>：不保存座標、不保存搜尋內容、不保存 IP。伺服器只保留經 HMAC 雜湊後的裝置識別碼與其請求次數統計，用於計算使用人數；該統計在裝置連續 <strong>180 天</strong>未再出現後自動刪除。</li>
+  <li>你可以來信要求刪除與你的裝置對應的伺服器統計；由於識別碼經過雜湊，來信時請一併提供 App 內「關於」頁顯示的版本與大致使用期間，以利比對。</li>
+</ul>
 
 <h2>五、你的選擇</h2>
 <ul>
   <li><strong>位置權限</strong>：可在 iOS「設定 → 隱私權與安全性 → 定位服務」隨時關閉。關閉後仍可手動輸入出發地與目的地規劃路線，但無法使用導航與偏離路線偵測。</li>
+  <li><strong>行事曆權限</strong>：可在 iOS「設定 → 隱私權與安全性 → 行事曆」隨時關閉。關閉後只是無法使用「同步日曆」，其餘功能不受影響。</li>
+  <li><strong>動作與健身權限</strong>：可在 iOS「設定 → 隱私權與安全性 → 動作與健身」隨時關閉。關閉後導航照常運作，只是靜止時的省電判斷會改用車速推估。</li>
   <li><strong>通知</strong>：可在 iOS 設定中關閉，日常任務的提醒即不再送出。</li>
   <li><strong>刪除資料</strong>：刪除本 App 即刪除所有留在裝置上的資料，裝置識別碼同時重置。</li>
 </ul>
